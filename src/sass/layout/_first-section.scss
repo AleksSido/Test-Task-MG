@@ -1,0 +1,273 @@
+.fs {
+	width: 100%;
+}
+.fs__inner-wrapper {
+	width: 100%;
+	padding-top: 80px;
+	padding-bottom: 40px;
+	font-size: 0;
+}
+@mixin fs__inner-wrapper--md {
+	.fs__inner-wrapper {
+		width: 1000px;
+		margin: 0 auto;
+		padding-top: 130px;
+		padding-bottom: 150px;
+	}
+}
+.section-heading {
+	font-family: "Proxima Nova Light", sans-serif;
+	font-size: 21px;
+	text-transform: uppercase;
+	font-weight: 300;
+}
+.fs__section-heading {
+	margin: 0 0 20px;
+}
+.section-heading_default-theme {
+	color: $heading;
+}
+.section-heading__bold-part {
+	@include heading(40px);
+}
+@mixin section-heading--md {
+	.section-heading {
+		font-size: 30px;
+	}
+	.section-heading__bold-part {
+		font-size: 56px;
+	}
+}
+.fs-activity {
+	position: relative;
+	display: inline-block;
+	width: 280px;
+	height: 130px;
+	margin: 43px auto;
+	vertical-align: top;
+}
+@mixin fs-activity--xs {
+	.fs-activity {
+		width: 335px;
+	}
+}
+@mixin fs-activity--md {
+	.fs-activity:nth-of-type(1),
+	.fs-activity:nth-of-type(3) {
+		margin: 43px 110px 43px 45px;
+	}
+	.fs-activity:nth-of-type(2),
+	.fs-activity:nth-of-type(4) {
+		margin: 43px 45px 43px 110px;
+	}
+}
+.fs-activity__icon {
+	position: absolute;
+	top: 0; right: 0; bottom: 0; left: 0;
+	margin: auto;
+    background-image: url('../images/spritesheet.png');
+    transition: top 1s ease;
+}
+.fs-activity__icon1 {	
+    background-position: -300px -109px;
+    width: 127px;
+    height: 109px;
+}
+.fs-activity__icon2 {
+   background-position: -300px -218px;
+    width: 114px;
+    height: 99px;
+}
+.fs-activity__icon3 {
+    background-position: -427px -197px;
+    width: 98px;
+    height: 98px;
+}
+.fs-activity__icon4 {
+    background-position: -534px -92px;
+    width: 92px;
+    height: 92px;
+}
+.fs-activity__heading {
+	@include heading(18px);
+} 
+.fs-activity__heading_default-theme {
+	color: $heading;
+}
+.fs-activity__horizontal-dash {
+	width: 30px;
+	border-bottom: 1px solid;
+	margin: 24px auto;
+}
+.fs-activity__horizontal-dash_default-theme {
+	border-color: $horizontal-dash;
+}
+.fs-activity__text {
+	margin: 0;
+	@include text(18px);
+	font-weight: 100;
+	line-height: 1.333;
+}
+.fs-activity__text_default-theme {
+	color: $text;
+}
+.fs-activity__consultation {
+	position: absolute;
+	bottom: 0;
+	display: none;
+	width: 100%;
+	margin: 0;
+	padding: 16px 0;
+	box-sizing: border-box;
+	font-family: "Proxima Nova Bold", sans-serif;
+	font-size: 18px;
+	text-transform: uppercase;
+	border: 2px solid;
+}
+.fs-activity__consultation_default-theme {
+	color: $accent;
+	border-color: $accent;
+}
+.fs-activity:hover > .fs-activity__heading,
+.fs-activity:hover > .fs-activity__horizontal-dash,
+.fs-activity:hover > .fs-activity__text {
+	display: none;
+}
+.fs-activity:hover > .fs-activity__consultation {
+	display: block;
+}
+.fs-activity:hover > .fs-activity__icon {	
+    top: -120px;
+}
+.fs-activity:hover > .fs-activity__icon1 {	
+    background-position: -300px 0px;
+}
+.fs-activity:hover > .fs-activity__icon2 {	
+    background-position: -300px -317px;
+}
+.fs-activity:hover > .fs-activity__icon3 {	
+    background-position: -427px -97px;
+}
+.fs-activity:hover > .fs-activity__icon4 {	
+    background-position: -534px 0px;
+}
+.get-consultation-modal__back {
+	display: none;
+	position: fixed;
+	top: 0; left: 0; bottom: 0; right: 0;
+	width: 100%;
+	min-height: 100%;
+	z-index: 20;
+}
+.get-consultation-modal__back_default-theme {
+	background-color: $modal-out-back;
+}
+.get-consultation-modal {
+	position: fixed;
+	top: 0; left: 0; bottom: 0; right: 0;
+	margin: auto;
+	width: 100%;
+	height: 500px;
+	box-sizing: border-box;
+	padding: 20px;
+	z-index: 30;	
+}
+@mixin get-consultation-modal--xs {
+	.get-consultation-modal {
+		width: 390px;
+		height: 569px;
+	}
+}
+.get-consultation-modal_default-theme {
+	background-color: $odd-section-back;
+}
+.get-consultation-modal__close-icon {
+	position: absolute;
+	right: 5px;
+	margin-top: -15px;
+	width: 15px;
+    height: 14px;
+    background-image: url(../images/spritesheet.png);
+    background-position: -547px -307px;
+    cursor: pointer;
+}
+@mixin get-consultation-modal__close-icon--xs {
+	.get-consultation-modal__close-icon {
+		right: auto;
+		margin-left: 350px;
+	}
+}
+.get-consultation-modal__heading {
+	margin: 0 0 15px;
+	font-family: "Proxima Nova Bold", sans-serif;
+	font-size: 18px;
+}
+@mixin get-consultation-modal__heading--xs {
+	.get-consultation-modal__heading {
+		font-size: 24px;
+	}
+}
+.get-consultation-modal__heading_default-theme {
+	color: $heading;
+}
+.get-consultation-modal__text {
+	font-family: "Proxima Nova Regular", sans-serif;
+	font-size: 12px;
+}
+@mixin get-consultation-modal__text--xs {
+	.get-consultation-modal__text {
+		font-size: 15px;
+	}
+}
+.get-consultation-modal__text_default-theme {
+	color: $heading;
+}
+.get-consultation-modal__label {
+	margin-bottom: 7px;
+	text-align: left;
+	font-family: "Proxima Nova Regular", sans-serif;
+	font-size: 10px;
+} 
+@mixin get-consultation-modal__label--xs {
+	.get-consultation-modal__label {
+		font-size: 16px;
+	}
+}
+.get-consultation-modal__label_default-theme {
+    color: $form-label;
+}
+.get-consultation-modal__submit {
+	width: 100%;
+	height: 44px;
+	padding: 20px;
+	margin: 0 0 10px;
+	box-sizing: border-box;
+	@include heading(12px);
+	border: 0px solid;
+	border-bottom: 3px solid;
+	text-align: center;
+	cursor: pointer;
+}
+@mixin get-consultation-modal__submit--xs {
+	.get-consultation-modal__submit {
+		height: 64px;
+		font-size: 18px;
+		margin: 0 0 20px;
+	}
+}
+.get-consultation-modal__note {
+	margin: 0;
+	font-family: "Proxima Nova Regular", sans-serif;
+	font-size: 13px;
+	line-height: 24px;
+}
+.get-consultation-modal__note_default-theme {
+	color: $form-text;
+}
+.get-consultation-modal__lock-icon {
+	display: inline-block;
+	width: 8px;
+    height: 10px;
+	background-image: url(../images/spritesheet.png);
+    background-position: -562px -307px;
+}

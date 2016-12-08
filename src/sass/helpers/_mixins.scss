@@ -1,0 +1,11 @@
+@mixin text($current-font-size) {
+	font-family: 'Roboto', sans-serif;
+	font-size: $current-font-size;
+}
+@mixin heading($current-font-size) {
+	font-family: "Proxima Nova Bold", sans-serif;
+	font-size: $current-font-size;
+	text-transform: uppercase;
+}
+
+

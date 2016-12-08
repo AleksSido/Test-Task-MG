@@ -1,0 +1,41 @@
+@media (min-width: (480px/16px)+em) {
+	@include fs-activity--xs;
+	@include get-consultation-modal--xs;
+	@include get-consultation-modal__close-icon--xs;
+	@include get-consultation-modal__heading--xs;
+	@include get-consultation-modal__text--xs;
+	@include get-consultation-modal__label--xs;
+	@include get-consultation-modal__submit--xs;
+	@include ts__inner-wrapper--xs;
+	@include cases-container-window--xs;
+	@include cases-container-full--xs;
+	@include case--xs;
+	@include case-shadow--xs;
+	@include case__dropup-triangle--xs;
+	@include case__label-bar--xs;
+	@include case__label--xs;
+	@include case__title--xs;
+	@include case__title1--xs;
+	@include case__hidden-description--xs;
+	@include case__hidden-description-bold-part--xs;
+	@include case__hidden-button--xs;
+}
+@media (min-width: (768px/16px)+em) {
+	@include ss__inner-wrapper--sm;
+	@include ss-activity--sm;
+	@include ts__inner-wrapper--sm;
+	@include ts-arrow--sm;
+	@include ts__section-heading--sm;
+	@include cases-container-window--sm;
+}
+@media (min-width: (1040px/16px)+em) {
+	@include fs__inner-wrapper--md;
+	@include ss__inner-wrapper--md;
+	@include ts__inner-wrapper--md;
+	@include section-heading--md;
+	@include fs-activity--md;
+	@include ss-activity--md;
+	@include cases-container-window--md;
+	@include case--md;
+	@include case-accent-colors--md;
+}

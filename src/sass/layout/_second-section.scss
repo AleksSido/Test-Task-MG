@@ -1,0 +1,214 @@
+.ss_default-theme {
+	background-color: $even-section-back;
+}
+.ss__inner-wrapper {
+	width: 100%;
+	margin: 0 auto;
+	padding-top: 50px;
+	padding-bottom: 70px;
+	font-size: 0;
+}
+@mixin ss__inner-wrapper--sm {
+	.ss__inner-wrapper {
+		padding-bottom: 90px;
+	}
+}
+@mixin ss__inner-wrapper--md {
+	.ss__inner-wrapper {
+		width: 1000px;
+		padding-top: 90px;
+		padding-bottom: 120px;
+	}
+}
+.ss__section-heading {
+	margin: 0;
+}
+.ss-activity-container {
+	position: relative;
+	display: inline-block;
+	width: 300px;
+	height: 453px;
+	box-sizing: border-box;
+	margin: 50px auto 0;
+	vertical-align: top;
+	perspective: 600px;
+}
+.ss-activity {
+	position: absolute;
+	top: 0; right: 0; bottom: 0; left: 0;
+	display: inline-block;
+	width: 300px;
+	height: 453px;
+	box-sizing: border-box;
+	padding-top: 80px;
+	vertical-align: top;
+	background-image: url('../images/spritesheet.png');
+	background-position: 0px 0px;
+	transform: rotateY(0deg); 
+	background-color: $even-section-back;
+}
+@mixin ss-activity--sm {
+	.ss-activity-container {
+		margin: 50px 37px 0;
+	}
+}
+@mixin ss-activity--md {
+	.ss-activity-container {
+		margin: 50px 0 0;
+	}
+	.ss-activity-container:nth-of-type(2) {
+		margin: 50px 46px 0;
+	}
+}
+.ss-activity__icon-container1 {
+	width: 107px;
+	height: 97px;
+	margin: 0 auto 30px;
+	background-image: url('../images/spritesheet.png');
+	background-position: -427px 0px;	
+}
+.ss-activity__icon-container2 {
+	width: 87px;
+	height: 103px;
+	margin: 0 auto 20px;
+	background-image: url('../images/spritesheet.png');
+	background-position: -427px -295px;	
+}
+.ss-activity__icon-container3 {
+	width: 91px;
+	height: 89px;
+	margin: 0 auto 28px;
+	background-image: url('../images/spritesheet.png');
+	background-position: -534px -184px;	
+}
+.ss-activity__heading {
+	margin: 0 0 20px;
+	font-family: "Proxima Nova Xbold", sans-serif;
+	font-size: 16px;
+	text-transform: uppercase;
+} 
+.ss-activity__heading_default-theme {
+	color: $heading;
+}	
+.ss-activity__text {
+	box-sizing: border-box;
+	margin: 0 0 30px;
+	padding: 0 15px;
+	@include text(19px);
+	font-weight: 100;
+	line-height: 1.421;
+} 
+.ss-activity__text_default-theme {
+	color: $text;
+}
+.ss-activity__button {
+	width: 187px;
+	height: 60px;
+	margin: 0;
+	@include heading(20px);
+	border: 0px solid;
+	border-bottom: 3px solid;
+	cursor: pointer;
+}
+.ss-activity__button_default-theme {
+	color: $odd-section-back;
+	background-color: $accent;
+	border-color: $accent-shadow;
+}
+.ss-activity-back-side {
+	position: absolute;
+	top: 0; right: 0; bottom: 0; left: 0;
+	width: 300px;
+	height: 453px;
+	box-sizing: border-box;
+	padding: 36px 20px 40px;	
+	transform: rotateY(270deg); 
+}
+.ss-activity-back-side_default-theme {
+	background-color: $odd-section-back;
+}
+.ss-activity-back-side__text {
+	box-sizing: border-box;
+	margin: 0 0 24px;
+	padding: 0 15px;
+	@include text(17px);
+	font-weight: 100;
+	line-height: 1.421;
+} 
+.ss-activity-back-side__input-container {
+	position: relative;
+	margin-bottom: 20px;
+	font-size: 0;
+}
+.ss-activity-back-side__input-name,
+.ss-activity-back-side__input-email,
+.ss-activity-back-side__input-phone1,
+.ss-activity-back-side__input-phone2,
+.ss-activity-back-side__input-phone3 {
+	width: 100%;
+	height: 48px;	
+	box-sizing: border-box;
+	padding-left: 40px; 
+	@include text(17px);
+	font-weight: 100;
+	line-height: 48px;
+}
+.ss-activity-back-side__input-name_default-theme,
+.ss-activity-back-side__input-email_default-theme,
+.ss-activity-back-side__input-phone_default-theme {
+	color: $heading;
+	background-color: $even-section-back;
+	&::-webkit-input-placeholder { 
+	  color: $form-text;
+	}
+	&::-moz-placeholder { 
+	  color: $form-text;
+	}
+	&:-ms-input-placeholder { 
+	  color: $form-text;
+	}
+	&:-moz-placeholder { 
+	  color: $form-text;
+	}
+} 
+.ss-activity-back-side__input-phone1 {
+	display: inline-block;
+	width: (60px/248px)*100%;
+	margin-right: (10px/248px)*100%;
+	padding-left: 30px; 
+}
+.ss-activity-back-side__input-phone2 {
+	display: inline-block;
+	width: (56px/248px)*100%;
+	margin-right: (10px/248px)*100%;
+	padding-left: 0; 
+	text-align: center;
+}
+.ss-activity-back-side__input-phone3 {
+	display: inline-block;
+	width: (112px/248px)*100%;
+	padding-left: 0; 
+	text-align: center;
+}
+.ss-activity-back-side__icon {
+	position: absolute;
+	top: 0; left: 10px; bottom: 0;
+	margin: auto;
+	background-image: url('../images/spritesheet.png');
+}
+.ss-activity-back-side__person-icon {
+	width: 17px;
+    height: 16px;
+    background-position: -602px -289px;  
+}
+.ss-activity-back-side__email-icon {
+	width: 20px;
+    height: 16px;
+    background-position: -602px -273px;  
+}
+.ss-activity-back-side__phone-icon {
+	width: 13px;
+    height: 24px;
+    background-position: -534px -307px;  
+}
+

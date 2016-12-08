@@ -1,0 +1,49 @@
+/*
+Fs, ss, ts are corresponding abbreviations of first, second and third sections.
+*/
+body {
+	margin: 0;
+	padding: 0;	
+	text-align: center;
+}
+a {
+	text-decoration: none;
+}
+ul {
+	list-style: none;
+}
+input {
+	border: none;
+}
+@font-face {
+	font-weight: normal;
+    font-family: "BebasNeue";
+    src: url("../fonts/BebasNeueBold.otf");   
+}
+@font-face {
+    font-weight: 300;
+    font-family: "Proxima Nova Light";
+    src: url("../fonts/ProximaNovaLight.otf");
+}
+@font-face {
+    font-weight: normal;
+    font-family: "Proxima Nova Regular";
+    src: url("../fonts/ProximaNovaRegular.otf");
+}
+@font-face {
+    font-weight: 700;
+    font-family: "Proxima Nova Bold";
+    src: url("../fonts/ProximaNovaBold.otf");
+}
+@font-face {
+    font-weight: 900;
+    font-family: "Proxima Nova Xbold";
+    src: url("../fonts/ProximaNovaExtrabold.otf");
+}
+
+@import "helpers/variables";
+@import "helpers/mixins";
+@import "layout/first-section";
+@import "layout/second-section";
+@import "layout/third-section";
+@import "layout/media-queries";
